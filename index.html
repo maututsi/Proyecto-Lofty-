@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lofty</title>
+    <style>
+
+        @keyframes slideUp
+        {
+            from
+            {
+                opacity: 0.5;
+                transform: translateY(50px);
+            }
+            to
+            {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @font-face
+        {
+            font-family: "Futura";
+            src: url("fuentes/Futura_ICG.ttf") format("truetype");
+        }
+
+        @font-face
+        {
+            font-family: "DM Sans";
+            src: url("fuentes/DMSans-Medium.ttf") format("truetype");
+        }
+
+        @font-face
+        {
+            font-family: "Cocogoose";
+            src: url("fuentes/Cocogoose-Pro-Regular-trial.ttf") format("truetype");
+        }
+
+        body 
+        {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden; /* Oculta la barra de desplazamiento */
+        }
+        
+        video 
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .menu 
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* Cubre todo el ancho */
+            height: 60px; /* Altura fija del menú */
+            background: #ff4753; /* Fondo semitransparente */
+            color: white;
+            display: flex; /* Flexbox para organizar el contenido */
+            align-items: center; /* Centra verticalmente */
+            padding: 0 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra elegante */
+            z-index: 100; /* Asegura que esté por encima del video */
+        }
+        
+        .menu h1 
+        {
+            font-family: "Futura", sans-serif;
+            font-size: 1.7rem;
+            margin: 0;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+        
+        .menu img 
+        {
+            margin-right: 10px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .menu a 
+        {
+            font-family: "DM Sans", sans-serif;
+            color: white;
+            text-decoration: none;
+            margin-right: 30px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        
+        .menu a:hover 
+        {
+            color: #c5c5c5; /* Cambia de color al pasar el cursor */
+        }
+        
+        .content 
+        {
+            margin-top: 140px; /* Añade espacio debajo del menú para el contenido */
+            text-align: center;
+            color: white;
+        }
+        
+        .content h2
+        {
+            font-family: "Cocogoose", sans-serif;
+            font-size: 2.5rem;
+            animation: slideUp 1.2s ease-out;
+        }
+
+        .content p
+        {
+            font-family: "DM Sans", sans-serif;
+            font-size: 1.5rem;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .button-container
+        {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button
+        {
+            font-family: "DM Sans", sans-serif;
+            background: #faffb9db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover
+        {
+            background: #fff86ddb;
+            transform: scale(1.1);
+        }
+
+        button:active
+        {
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="Video sin título ‐ Hecho con Clipchamp.mp4" type="video/mp4">
+    </video>
+
+    <div class="menu">
+        <h1>
+            <img src="Logo app (1).png">
+            Lofty
+        </h1>
+        <div>
+            <a href="https://example.com/registro">Refugios</a>
+            <a href="https://example.com/inicio-sesion">Preguntas frecuentes</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>¡Tu nuevo mejor amigo te espera!</h2>
+        <p>¡Adopta hoy!</p>
+        <br><br>
+    </div>
+
+    <div class="button-container">
+        <button onclick="window.location.href='https://example.com/registro'">Registrarse</button>
+        <button onclick="window.location.href='https://example.com/inicio-sesion'">Iniciar sesión</button>
+    </div>
+</body>
+</html>
