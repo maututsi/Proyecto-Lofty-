@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugios</title>
+    <style>
+       @font-face
+        {
+            font-family: "Futura";
+            src: url("recursos/fuentes/Futura_ICG.ttf") format("truetype");
+        }
+
+        @font-face
+        {
+            font-family: "DM Sans";
+            src: url("recursos/fuentes/DMSans-Medium.ttf") format("truetype");
+        }
+        
+        @font-face
+        {
+            font-family: "Cocogoose";
+            src: url("recursos/fuentes/Cocogoose-Pro-Regular-trial.ttf") format("truetype");
+        }
+
+        @keyframes slideInLeft
+        {
+            from
+            {
+                opacity: 0.3;
+                transform: translateX(-100px);
+            }
+            to
+            {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight
+        {
+            from
+            {
+                opacity: 0.3;
+                transform: translateX(100px);
+            }
+            to
+            {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        body
+        {
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            font-family: "DM Sans", sans-serif;
+        }
+
+        h1
+        {
+            position: relative;
+            display: flex;
+            font-family: "Cocogoose", sans-serif;
+            color: #ff4753;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+
+        h2
+        {
+            position: relative;
+            display: flex;
+            font-family: "DM Sans", sans-serif;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .contenedor-impar
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .caja
+        {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .texto
+        {
+            flex: 1;
+            padding: 20px;
+            margin-left: 10px;
+        }
+
+        .texto h2
+        {
+            font-family: "DM Sans", sans-serif;
+            color: #ff4753;
+            margin-bottom: 15px;
+            justify-content: left;
+        }
+
+        .texto p
+        {
+            font-family: "DM Sans", sans-serif;
+            margin-top: 0;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .imagen
+        {
+            flex: 1;
+            background: url("recursos/Imágenes/refugio-ejemplo.jpg") no-repeat center center;
+            background-size: cover; 
+        }
+        
+        .contenedor-par
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        .caja
+        {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .texto
+        {
+            flex: 1;
+            padding: 20px;
+            margin-left: 10px;
+        }
+
+        .texto h2
+        {
+            font-family: "DM Sans", sans-serif;
+            color: #ff4753;
+            margin-bottom: 15px;
+            justify-content: left;
+        }
+
+        .texto p
+        {
+            font-family: "DM Sans", sans-serif;
+            margin-top: 0;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .imagen
+        {
+            flex: 1;
+            background: url('https://via.placeholder.com/400') no-repeat center center;
+            background-size: cover; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Refugios</h1>
+    <h2>¡Conoce los refugios disponibles en tu zona!</h2>
+    <div class="contenedor-impar">
+        <div class="caja">
+            <div class="texto">
+                <h2>Nombre del refugio 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod laborum natus, porro veniam placeat dolores iusto nemo aut praesentium sapiente, facilis ipsa at perspiciatis nam officia, accusamus omnis! Tempora, saepe!</p>
+            </div>
+            <div class="imagen">
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-par">
+        <div class="caja">
+            <div class="imagen"></div>
+            <div class="texto">
+                <h2>Nombre del refugio 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad debitis nihil quasi, accusantium, fuga eligendi nisi delectus accusamus itaque tenetur, voluptatibus modi praesentium? Inventore culpa, vel mollitia atque sunt sed?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-impar">
+        <div class="caja">
+            <div class="texto">
+                <h2>Nombre del refugio 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod laborum natus, porro veniam placeat dolores iusto nemo aut praesentium sapiente, facilis ipsa at perspiciatis nam officia, accusamus omnis! Tempora, saepe!</p>
+            </div>
+            <div class="imagen">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
