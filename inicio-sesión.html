@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Inicio de Sesión</title>
     <style>
         @font-face {
             font-family: "Futura";
@@ -20,7 +20,7 @@
             src: url("recursos/fuentes/Cocogoose-Pro-Regular-trial.ttf") format("truetype");
         }
 
-        /* Estilo general del cuerpo */
+        /* Estilo general */
         body {
             margin: 0;
             padding: 0;
@@ -43,7 +43,7 @@
         /* Caja principal */
         .caja {
             width: 100%;
-            max-width: 600px;
+            max-width: 400px;
             background-color: rgb(255, 255, 255);
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -66,7 +66,7 @@
         }
 
         .caja-de-texto input {
-            width: 93%;
+            width: 90%;
             padding: 10px 15px;
             font-family: "DM Sans", sans-serif;
             font-size: 1rem;
@@ -99,31 +99,40 @@
         .caja .btn:hover {
             background-color: #e63d49;
         }
+
+        /* Enlace de registro */
+        .registro-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .registro-link a {
+            color: #ff4753;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .registro-link a:hover {
+            color: #e63d49;
+        }
     </style>
 </head>
 <body>
     <div class="caja-contenedor">
         <div class="caja">
-            <h2>Registro</h2>
+            <h2>Inicia Sesión</h2>
             <div class="caja-de-texto">
-                <input type="text" placeholder="Nombre completo">
-            </div>
-            <div class="caja-de-texto">
-                <input type="email" placeholder="Correo electrónico">
-            </div>
-            <div class="caja-de-texto">
-                <input type="text" placeholder="Número telefónico (opcional)">
-            </div>
-            <div class="caja-de-texto">
-                <input type="text" placeholder="Código postal">
-            </div>
-            <div class="caja-de-texto">
-                <input type="text" placeholder="Nombre de usuario">
+                <input type="text" placeholder="Nombre de usuario o correo electrónico">
             </div>
             <div class="caja-de-texto">
                 <input type="password" placeholder="Contraseña">
             </div>
-            <button class="btn">Registrar</button>
+            <button class="btn">Ingresar</button>
+            <div class="registro-link">
+                ¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a>
+            </div>
         </div>
     </div>
 </body>
