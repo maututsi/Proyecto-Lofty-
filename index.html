@@ -156,74 +156,76 @@
     
         
         .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-    
-        
-        button {
-            font-family: "DM Sans", sans-serif;
-            background: rgba(255, 248, 109, 0.85);
-            color: black;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            animation: slideUp 0.5s ease-out;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-    
-        button:hover {
-            background: rgba(250, 255, 185, 0.95);
-            transform: scale(1.05);
-            box-shadow: 0 6px 8px rgba(0,0,0,0.2);
-        }
-    
-        button:active {
-            transform: scale(0.95);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-    
-        
-        .boton_inferior {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-        }
-    
-        .boton_inferior button {
-            background: rgba(255, 71, 83, 0.9);
-            color: white;
-            transition: all 0.3s ease;
-        }
-    
-        .boton_inferior button:hover {
-            background: rgba(255, 103, 113, 0.95);
-        }
-    
-        /* Responsividad básica */
-        @media (max-width: 768px) {
-            .menu {
-                flex-direction: column;
-                height: auto;
-                padding: 10px;
-            }
-    
-            .button-container {
-                flex-direction: column;
-                align-items: center;
-            }
-    
-            button {
-                width: 80%;
-                margin-bottom: 10px;
-            }
-        }
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.button {
+    font-family: "DM Sans", sans-serif;
+    background: rgba(255, 248, 109, 0.85);
+    color: black;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: slideUp 0.5s ease-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.button:hover {
+    background: rgba(250, 255, 185, 0.95);
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+}
+
+.button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.boton_inferior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.boton_inferior .button {
+    background: rgba(255, 71, 83, 0.9);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.boton_inferior .button:hover {
+    background: rgba(255, 103, 113, 0.95);
+}
+
+/* Responsividad básica */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -253,12 +255,12 @@
     </div>
 
     <div class="button-container">
-        <button onclick="window.location.href='./registro.html'">Registrarse</button>
-        <button onclick="window.location.href='./inicio-sesion.html'">Iniciar sesión</button>
+        <a href="./registro.html" class="button">Registrarse</a>
+        <a href="./inicio-sesion.html" class="button">Iniciar sesión</a>
     </div>
     <br>
     <div class="boton_inferior">
-        <button onclick="window.location.href='https://www.youtube.com/@Fernanfloo'">Ir a la app</button>
+        <a href="https://www.youtube.com/@Fernanfloo" class="button">Ir a la app</a>
     </div>
 </body>
 </html>
