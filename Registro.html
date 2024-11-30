@@ -81,7 +81,6 @@
             box-shadow: 0 0 5px rgba(255, 71, 83, 0.5);
         }
 
-        /* Estilo del botón */
         .caja .btn {
             display: block;
             width: 100%;
@@ -96,14 +95,59 @@
             transition: background-color 0.3s ease;
         }
 
-        .caja .btn:hover {
+        .caja .boton-registro:hover 
+        {
             background-color: #e63d49;
+        }
+
+        .caja img
+        {
+            position: fixed;
+            width: 70px;
+        }
+
+        .link-iniciar-sesion
+        {
+            text-align: center;
+        }
+
+        .link-iniciar-sesion a
+        {
+            color:#ff4753;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .link-iniciar-sesion a:hover
+        {
+            transition: ease-out 0.5s;
+            text-shadow: 1px 1px 2px rgba(93, 93, 93, 0.5);
+        }
+
+        .caja .boton-registro
+        {
+            background: rgba(255, 71, 83, 0.9);
+            display: flex;
+            border-radius: 10px;
+            color: white;
+            transition: all 0.3s ease;
+            padding: 7px;
+            justify-content: center;
+        }
+
+        .caja .boton-registro a
+        {
+            font-family: "Cocogoose" sans-serif;
+            text-decoration: none;
+            text-align: center;
+            color: white;
         }
     </style>
 </head>
 <body>
     <div class="caja-contenedor">
         <div class="caja">
+            <a href="index.html"><img src="recursos/Imágenes/Logo app - colores invertidos.png" alt=""></a>
             <h2>Registro</h2>
             <div class="caja-de-texto">
                 <input type="text" placeholder="Nombre completo">
@@ -123,7 +167,12 @@
             <div class="caja-de-texto">
                 <input type="password" placeholder="Contraseña">
             </div>
-            <button class="btn">Registrar</button>
+            <div class="boton-registro">
+                <a href="formulario.html">Registrarse</a>
+            </div>
+            <div class="link-iniciar-sesion">
+                <p>¿Ya tienes una cuenta? <a href="inicio-sesion.html" class="registro">Inicia sesión aquí</a></p>
+            </div>
         </div>
     </div>
 </body>

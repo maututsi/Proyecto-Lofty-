@@ -72,7 +72,7 @@
             left: 0;
             width: 100%;
             height: 60px;
-            background: rgba(255, 71, 83, 0.9);
+            background: #ff4753;
             color: white;
             display: flex;
             align-items: center;
@@ -107,7 +107,7 @@
             font-family: "DM Sans", sans-serif;
             color: white;
             text-decoration: none;
-            margin-right: 20px;
+            margin-left: 20px;
             font-size: 1rem;
             transition: all 0.3s ease;
             position: relative;
@@ -156,75 +156,75 @@
     
         
         .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+       }
 
-.button {
-    font-family: "DM Sans", sans-serif;
-    background: rgba(255, 248, 109, 0.85);
-    color: black;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    animation: slideUp 0.5s ease-out;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-}
+        .button {
+            font-family: "DM Sans", sans-serif;
+            background: rgba(255, 248, 109, 0.85);
+            color: black;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: slideUp 0.5s ease-out;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
 
-.button:hover {
-    background: rgba(250, 255, 185, 0.95);
-    transform: scale(1.05);
-    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
-}
+        .button:hover {
+            background: rgba(250, 255, 185, 0.95);
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+        }
 
-.button:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
+        .button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
 
-.boton_inferior {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
+        .boton_inferior {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
 
-.boton_inferior .button {
-    background: rgba(255, 71, 83, 0.9);
-    color: white;
-    transition: all 0.3s ease;
-}
+        .boton_inferior .button {
+            background: rgba(255, 71, 83, 0.9);
+            color: white;
+            transition: all 0.3s ease;
+        }
 
-.boton_inferior .button:hover {
-    background: rgba(255, 103, 113, 0.95);
-}
+        .boton_inferior .button:hover {
+            background: rgba(255, 103, 113, 0.95);
+        }
 
-/* Responsividad básica */
-@media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
+        /* Responsividad básica */
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
 
-    .button-container {
-        flex-direction: column;
-        align-items: center;
-    }
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .button {
-        width: 80%;
-        margin-bottom: 10px;
-    }
-}
+            .button {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+        }
 
     </style>
 </head>

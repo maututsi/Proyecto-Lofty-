@@ -43,7 +43,7 @@
         /* Caja principal */
         .caja {
             width: 100%;
-            max-width: 400px;
+            max-width: 500px;
             background-color: rgb(255, 255, 255);
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -60,7 +60,6 @@
             color: #ff4753;
         }
 
-        /* Estilo de los inputs */
         .caja-de-texto {
             margin-bottom: 20px;
         }
@@ -115,14 +114,22 @@
         }
 
         .registro-link a:hover {
-            color: #e63d49;
+            transition: ease-out 0.5s;
+            text-shadow: 1px 1px 2px rgba(93, 93, 93, 0.5);
+        }
+
+        .caja img
+        {
+            width: 70px;
+            position: fixed;
         }
     </style>
 </head>
 <body>
     <div class="caja-contenedor">
         <div class="caja">
-            <h2>Inicia Sesión</h2>
+            <a href="index.html"><img src="recursos/Imágenes/Logo app - colores invertidos.png"></a>
+            <h2>Iniciar sesión</h2>
             <div class="caja-de-texto">
                 <input type="text" placeholder="Nombre de usuario o correo electrónico">
             </div>
