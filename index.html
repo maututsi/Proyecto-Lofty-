@@ -5,76 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lofty</title>
     <style>
-
-        @keyframes slideUp
-        {
-            from
-            {
+        /* Fuentes personalizadas */
+        @font-face {
+            font-family: "Futura";
+            src: url("recursos/fuentes/Futura_ICG.ttf") format("truetype");
+            font-display: swap;
+        }
+    
+        @font-face {
+            font-family: "DM Sans";
+            src: url("recursos/fuentes/DMSans-Medium.ttf") format("truetype");
+            font-display: swap;
+        }
+    
+        @font-face {
+            font-family: "Cocogoose";
+            src: url("recursos/fuentes/Cocogoose-Pro-Regular-trial.ttf") format("truetype");
+            font-display: swap;
+        }
+    
+        @keyframes slideUp {
+            from {
                 opacity: 0.5;
                 transform: translateY(50px);
             }
-            to
-            {
+            to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
-        @font-face
-        {
-            font-family: "Futura";
-            src: url("recursos/fuentes/Futura_ICG.ttf") format("truetype");
-        }
-
-        @font-face
-        {
-            font-family: "DM Sans";
-            src: url("recursos/fuentes/DMSans-Medium.ttf") format("truetype");
-        }
-
-        @font-face
-        {
-            font-family: "Cocogoose";
-            src: url("recursos/fuentes/Cocogoose-Pro-Regular-trial.ttf") format("truetype");
-        }
-
-        body 
-        {
-            font-family: Arial, sans-serif;
+    
+        * {
             margin: 0;
-            height: 100vh;
-            overflow: hidden; /* Oculta la barra de desplazamiento */
+            padding: 0;
+            box-sizing: border-box;
         }
+    
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            line-height: 1.6;
+            color: white;
+        }
+    
         
-        video 
-        {
-            position: absolute;
+        .fondo {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
             z-index: -1;
         }
+    
+        .fondo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    
         
-        .menu 
-        {
-            position: absolute;
+        .menu {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 60px;
-            background: #ff4753;
+            background: rgba(255, 71, 83, 0.9);
             color: white;
-            display: flex; 
-            align-items: center; 
-            padding: 0 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
-            z-index: 100; 
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            backdrop-filter: blur(5px);
         }
-        
-        .menu h1 
-        {
+    
+        .menu h1 {
             font-family: "Futura", sans-serif;
             font-size: 1.7rem;
             margin: 0;
@@ -82,112 +90,140 @@
             display: flex;
             align-items: center;
         }
-        
-        .menu img 
-        {
+    
+        .menu img {
             margin-right: 10px;
             width: 50px;
             height: 50px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
         }
-
-        .menu a 
-        {
+    
+        .menu img:hover {
+            transform: scale(1.1);
+        }
+    
+        .menu a {
             font-family: "DM Sans", sans-serif;
             color: white;
             text-decoration: none;
-            margin-right: 30px;
+            margin-right: 20px;
             font-size: 1rem;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
+            position: relative;
         }
-        
-        .menu a:hover 
-        {
-            color: #c5c5c5; 
+    
+        .menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
         }
+    
+        .menu a:hover::after {
+            width: 100%;
+        }
+    
+        .menu a:hover {
+            color: #f0f0f0;
+        }
+    
         
-        .content 
-        {
+        .content {
             margin-top: 140px;
             text-align: center;
             color: white;
+            padding: 0 20px;
         }
-        
-        .content h2
-        {
+    
+        .content h2 {
             font-family: "Cocogoose", sans-serif;
             font-size: 2.5rem;
             animation: slideUp 1.2s ease-out;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-
-        .content p
-        {
+    
+        .content p {
             font-family: "DM Sans", sans-serif;
             font-size: 1.5rem;
             animation: slideUp 0.8s ease-out;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
-
-        .button-container
-        {
+    
+        
+        .button-container {
             display: flex;
             justify-content: center;
             gap: 20px;
+            margin-top: 30px;
         }
-
-        button
-        {
+    
+        
+        button {
             font-family: "DM Sans", sans-serif;
-            background: #fff86ddb;
+            background: rgba(255, 248, 109, 0.85);
             color: black;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 24px;
+            border-radius: 8px;
             font-size: 1rem;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
+            transition: all 0.3s ease;
             animation: slideUp 0.5s ease-out;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-
-        button:hover
-        {
-            background: #faffb9db ;
-            transform: scale(1.1);
+    
+        button:hover {
+            background: rgba(250, 255, 185, 0.95);
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.2);
         }
-
-        button:active
-        {
-            transform: scale(0.9);
+    
+        button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
-        .boton_inferior
-        {
+    
+        
+        .boton_inferior {
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-top: 20px;
         }
-
-        .boton_inferior button
-        {
-            background:#ff4753;
-            color: white;  
+    
+        .boton_inferior button {
+            background: rgba(255, 71, 83, 0.9);
+            color: white;
+            transition: all 0.3s ease;
         }
-
-        .boton_inferior button:hover
-        {
-            background-color: #ff6771;
+    
+        .boton_inferior button:hover {
+            background: rgba(255, 103, 113, 0.95);
         }
-
-        .fondo img
-        {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
+    
+        /* Responsividad básica */
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+    
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            button {
+                width: 80%;
+                margin-bottom: 10px;
+            }
         }
-
-        
     </style>
 </head>
 <body>
