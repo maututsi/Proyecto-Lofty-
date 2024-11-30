@@ -36,11 +36,12 @@
 
         .caja
         {
-            position: relative;
+            position: fixed;
             width: 60%;
             height: 800px;
             background-color: rgb(255, 255, 255);
             border-radius: 15px;
+            z-index: -1;
         }
 
         .caja h2
@@ -51,23 +52,20 @@
             color: #ff4753;
         }
 
-        .caja_de_texto input
+        .caja-de-texto input
         {
-            position: relative;
+            position: fixed;
             display: flex;
             font-family: DM Sans;
+            padding-left: 10px;
             margin-left: 35px;
             height: 30px;
-            width: 80%;
-            border-radius: 12px;
+            width: 50%;
             align-items: center;
             justify-content: center;
-        }
-
-        .placeholder
-        {
-            margin-left: 35px;
-            font-family: DM Sans;
+            border-radius: 12px;
+            z-index: 0;
+            border: 2px solid #b4b4b4
         }
     </style>
 </head>
@@ -75,13 +73,32 @@
     <div class="caja-contenedor">
         <div class="caja">
             <h2>Registro</h2>
-            
-            <div class="placeholder">
-                <p>Nombre</p>
+            <div class="caja-de-texto">
+                <input type="text" placeholder="Nombre completo">
             </div>
-
-            <div class="caja_de_texto">
-                <input type="text">
+            <br><br><br>
+            <div class="caja-de-texto">
+                <input type="text" placeholder="CURP">
+            </div>
+            <br><br><br>
+            <div class="caja-de-texto">
+                <input type="text" placeholder="Correo electrónico">
+            </div>
+            <br><br><br>
+            <div class="caja-de-texto">
+                <input type="text" placeholder="Número telefónico (opcional)">
+            </div>
+            <br><br><br>
+            <div class="caja-de-texto">
+                <input type="text" placeholder="Código postal">
+            </div>
+            <br><br><br>
+            <div class="caja-de-texto">
+                <input type="text" placeholder="Nombre de usuario">
+            </div>
+            <br><br><br>
+            <div class="caja-de-texto">
+                <input type="text" placeholder="Contraseña">
             </div>
         </div>
     </div>
