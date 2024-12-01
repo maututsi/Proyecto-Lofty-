@@ -90,6 +90,12 @@
             display: flex;
             align-items: center;
         }
+
+        .menu button
+        {
+            background: none;
+            border: none;
+        }
     
         .menu img {
             margin-right: 10px;
@@ -207,7 +213,6 @@
             background: rgba(255, 103, 113, 0.95);
         }
 
-        /* Responsividad básica */
         @media (max-width: 768px) {
             .menu {
                 flex-direction: column;
@@ -235,12 +240,14 @@
 
     <div class="menu">
         <h1>
-            <img src="recursos/Imágenes/Logo app (1).png">
+            <button id="reproducir-sonido"><img src="recursos/Imágenes/Logo app (1).png"></button>
+            <audio id="audio" src="recursos/audios/minecraft-sound-effect-hd.mp3"></audio>
+            <audio id="bark" src="recursos/audios/bark.mp3"></audio>
             Lofty
         </h1>
         <div>
             <a href="refugios.html">Refugios</a>
-            <a href="https://example.com/inicio-sesion">Preguntas frecuentes</a>
+            <a href="faq.html">Preguntas frecuentes</a>
         </div>
     </div>
 
@@ -262,5 +269,23 @@
     <div class="boton_inferior">
         <a href="https://www.youtube.com/@Fernanfloo" class="button">Ir a la app</a>
     </div>
+
+    <script>
+        document.getElementById("reproducir-sonido").addEventListener("click", function() 
+        {
+            const numero = Math.floor(Math.random() * 2);
+
+            if (numero === 0) 
+            {
+                document.getElementById("audio").play();
+                document.getElementById("audio").currentTime = 0;
+            } 
+            else 
+            {
+                document.getElementById("bark").play();
+                document.getElementById("bark").currentTime = 0;
+            }
+        });
+    </script>
 </body>
 </html>

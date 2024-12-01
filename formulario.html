@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de aptitud</title>
+    <style>
+        @font-face 
+        {
+            font-family: "Futura";
+            src: url("recursos/fuentes/Futura_ICG.ttf") format("truetype");
+        }
+
+        @font-face 
+        {
+            font-family: "DM Sans";
+            src: url("recursos/fuentes/DMSans-Medium.ttf") format("truetype");
+        }
+        
+        @font-face
+        {
+            font-family: "Cocogoose";
+            src: url("recursos/fuentes/Cocogoose-Pro-Regular-trial.ttf") format("truetype");
+        }
+
+        @keyframes aparecer
+        {
+            from
+            {
+                opacity: 0;
+                scale: 1.2;
+            }
+            to
+            {
+                scale: 1;
+                opacity: 1;
+            }
+        }
+
+        body
+        {
+            background-color: #dbdbdb;
+        }
+
+        .caja
+        {
+            background-color: white;
+            border-radius: 20px;
+            padding: 5px 8% 100px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .huella-final img
+        {
+            opacity: 0;
+            position: fixed;
+            position: absolute;
+            width: 300px;
+            right: 50px;
+            rotate: 20deg;
+            animation: aparecer 0.5s ease forwards;
+            animation-delay: 1s;
+        }
+
+        .huella-enmedio img
+        {
+            opacity: 0;
+            position: fixed;
+            position: absolute;
+            width: 300px;
+            right: 250px;
+            top: 200px;
+            rotate: 20deg;
+            animation: aparecer 0.5s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        .huella-abajo img
+        {
+            opacity: 0;
+            position: fixed;
+            position: absolute;
+            width: 300px;
+            right: 150px;
+            top: 450px;
+            rotate: 20deg;
+            animation: aparecer 0.5s ease forwards;
+        }
+
+        .caja h1
+        {
+            font-family: "Cocogoose", sans-serif;
+            color: #ff4753;
+            text-align: center;
+        }
+
+        .caja h3
+        {
+            font-family: "Cocogoose", sans-serif;
+            font-weight: lighter;
+            font-size: medium;
+            text-align: center;
+        }
+
+        .caja p
+        {
+            font-family: "DM Sans", sans-serif;
+        }
+
+        input[type="radio"]
+        {
+            accent-color: #ff4753;
+        }
+
+        .caja label
+        {
+            font-family: "DM Sans", sans-serif;
+            margin-right: 20px;   
+        }
+
+        .aviso
+        {
+            width: 45%;
+        }
+
+        .aviso p
+        {
+            font-size: smaller;
+            color:#353535;
+        }
+
+        .botones
+        {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        button
+        {
+            width: 100px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 10px 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            border: none;
+        }
+
+        button a
+        {
+            font-family: "Cocogoose", sans-serif;
+            text-decoration: none;
+            color: #ff4753;
+        }
+
+        .gatito
+        {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .gatito img
+        {
+            display: none;
+        }
+
+        @media (max-width: 1000px)
+        {
+            .imagen-ocultar
+            {
+                display:none;
+            }
+
+            .gatito img
+            {
+                display: block;
+                width: 300px;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 768px)
+        {
+            .aviso
+            {
+                width: 85%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="caja">
+
+        <div class="huella-final">
+            <img src="recursos/Imágenes/huella roja.png" class="imagen-ocultar">
+        </div>
+        <div class="huella-enmedio">
+            <img src="recursos/Imágenes/huella roja.png" class="imagen-ocultar">
+        </div>
+        <div class="huella-abajo">
+            <img src="recursos/Imágenes/huella roja.png" class="imagen-ocultar">
+        </div>
+       
+
+        <h1>Formulario de inicio</h1>
+        <h3>Conteste con honestidad las siguientes preguntas</h3>
+        <br>
+
+        <div class="preguntas">
+            <div class="pregunta1">
+                <label>
+                    <p>¿Se considera una persona activa o sedentaria?</p>
+                <input type="radio" name="ans1" value="activa"> Activa
+                </label>
+                <label>
+                <input type="radio" name="ans1" value="sedentaria"> Sedentaria
+                </label>
+            </div>
+    
+            <br>
+            <div class="pregunta2">
+                <label>
+                    <p>¿Vive en un departamento o en una casa con jardín?</p>
+                <input type="radio" name="ans2" value="si"> Sí
+                </label>
+                <label>
+                <input type="radio" name="ans2" value="no"> No
+                </label>
+            </div>
+    
+            <br>
+            <div class="pregunta3">
+                <label>
+                    <p>¿Le puede dedicar más de una hora diaria a su mascota?</p>
+                <input type="radio" name="ans3" value="si"> Sí
+                </label>
+                <label>
+                <input type="radio" name="ans3" value="no"> No
+                </label>
+            </div>
+    
+            <br>
+            <div class="pregunta4">
+                <label>
+                    <p>¿Prefiere una raza pequeña, mediana o grande?</p>
+                <input type="radio" name="ans4" value="pequeña"> Pequeña
+                </label>
+                <label>
+                <input type="radio" name="ans4" value="mediana"> Mediana
+                </label>
+                <label>
+                    <input type="radio" name="ans4" value="grande"> Grande
+                </label>
+            </div>
+    
+            <br>
+            <div class="pregunta5">
+                <label>
+                    <p>¿Le gustaría que la mascota sea bebé?</p>
+                <input type="radio" name="ans5" value="si"> Sí
+                </label>
+                <label>
+                <input type="radio" name="ans5" value="no"> No
+                </label>
+            </div>
+    
+            <br>
+            <div class="pregunta6">
+                <label>
+                    <p>¿Prefiere una mascota tranquila o activa?</p>
+                <input type="radio" name="ans6" value="tranquila"> Tranquila
+                </label>
+                <label>
+                <input type="radio" name="ans6" value="activa"> Activa
+                </label>
+            </div>
+        </div>
+
+        <br>
+        <div class="aviso">
+            <p>Esta información se empleará para saber si es apto para tener una mascota, así como para ajustar sus preferencias y así puedas obtener mejores recomendaciones.</p>
+        </div>
+
+        <br>
+        <div class="botones">
+            <div class="boton1">
+                <button class="boton"><a href="https://www.youtube.com/watch?v=pCJqZLaiySU&t=8s&pp=ygUPaG9sYSBzb3kgZ2VybWFu">Enviar</a></button>
+            </div>
+
+            <div class="boton2">
+                <button class="boton-regresar"><a href="Registro.html">Regresar</a></button>
+            </div>
+        </div>
+
+        <div class="gatito">
+            <br><br><br>
+            <img src="recursos/Imágenes/Captura de pantalla 2024-11-30 203356.png">
+        </div>
+    </div>
+</body>
+</html>
