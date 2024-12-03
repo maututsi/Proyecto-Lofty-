@@ -123,12 +123,26 @@
             width: 70px;
             position: fixed;
         }
+
+        @media (max-width: 768px)
+        {
+            .caja .logo img
+            {
+                position: relative;
+            }
+
+            .logo
+            {
+                display: flex;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="caja-contenedor">
         <div class="caja">
-            <a href="index.html"><img src="recursos/Imágenes/Logo app - colores invertidos.png"></a>
+            <div class="logo"><a href="index.html"><img src="recursos/Imágenes/Logo app - colores invertidos.png"></a></div>
             <h2>Iniciar sesión</h2>
             <div class="caja-de-texto">
                 <input type="text" placeholder="Nombre de usuario o correo electrónico">
