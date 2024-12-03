@@ -23,17 +23,37 @@
             src: url("recursos/fuentes/Cocogoose-Pro-Regular-trial.ttf") format("truetype");
         }
 
+        @keyframes entrar
+        {
+            from
+            {
+                transform: translateY(300px);
+            }
+            to
+            {
+                tranform: translateX(0px);
+            }
+        }
+
         body
         {
-            padding: 30px 50px;
+            padding: 30px 50px 0px;
             background-color: #eaeaea;
         }
 
         .caja
         {
             padding: 10px;
+            align-items: center;;
             background-color: white;
             border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .caja img
+        {
+            position: absolute;
+            width: 80px;
         }
 
         .caja h1
@@ -44,14 +64,165 @@
             justify-content: center;
         }
 
+        .caja:hover
+        {
+            border-color: #ff4753;
+            outline: none;
+            box-shadow: 0 0 15px #ff4753;
+            transition: 0.5s ease;
+        }
 
+        .preguntas
+        {
+            max-width: 60%;
+        }
+
+        details
+        {
+            background-color: white;
+            padding: 20px 5%;
+            border-radius: 15px;
+            line-height: 1.7;
+            font-family: "DM Sans", sans-serif;
+            color: rgb(120, 120, 120);
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        details:hover
+        {
+            border-color: #ff4753;
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 71, 83, 0.5);
+        }
+
+        details[open]
+        {
+            border-color: #ff4753;
+            outline: none;
+            box-shadow: 0 0 25px rgba(255, 0, 17, 0.5);
+            transition: 0.5s ease;
+        }
+
+        details summary
+        {
+            list-style: none;
+            color: #ff4753;
+        }
+
+        details summary::before
+        {
+            content: ">";
+            display: inline-block;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary::before
+        {
+            transform: rotate(90deg);
+        }
+
+        .foto img
+        {
+            position: absolute;
+            height: 500px;
+            max-width: 40%;
+            right: 50px;
+            border-radius: 20px;
+            bottom: 0;
+            animation: entrar 0.6s ease;
+        }
+
+        .foto-final
+        {
+            display: none;
+        }
+
+        @media (max-width: 800px)
+        {
+            .preguntas
+            {
+                max-width: 100%;
+            }
+
+            .foto
+            {
+                display: none;
+            }
+
+            .foto-final
+            {
+                display: flex;
+                justify-content: center;
+                bottom: 0;
+            }
+
+            .caja
+            {
+                justify-items: center;
+            }
+
+            .caja img
+            {
+                position: relative;
+                justify-content: center;
+                border-color: acacac;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="caja">
+        <a href="index.html"><img src="recursos/Imágenes/Logo app - colores invertidos.png"></a>
         <h1>Preguntas frecuentes</h1>
     </div>
 
-    
+    <div class="foto">
+        <img src="recursos/Imágenes/perrito asomado (1).png">
+    </div>
+
+    <div class="preguntas">
+        <br><br>
+
+        <br>
+        <details>
+            <summary>¿Qué animales se pueden adoptar con Lofty?</summary>
+            De momento el servicio únicamente alberga refugios de perros y gatos.
+        </details>
+
+        <br>
+        <details>
+            <summary>¿Hay un límite de mascotas que puedo adoptar?</summary>
+            No, no lo hay. Puedes llevar a cabo procesos de adopción de tantas mascotas como quieras siempre y cuando estés seguro de que puedas brindarles la atención y los cuidados necesarios a todas y cada una de ellas.
+        </details>
+
+        <br>
+        <details>
+            <summary>¿Necesito tener nacionalidad mexicana para adoptar?</summary>
+            No, únicamente debes tener tu domicilio en la misma entidad federativa en la que se encuentra el refugio.
+        </details>
+
+        <br>
+        <details>
+            <summary>¿Debo pagar para usar el servicio?</summary>
+            ¡Para nada! Lofty busca ser un servicio de adopción accesible para todos, no tienes que pagar por usar el servicio ni para comenzar, modificar o cancelar un proceso de adopción.
+        </details>
+
+        <br>
+        <details>
+            <summary>¿Qué documentos necesito para concretar un proceso de adopción?</summary>
+            La mayoría de refugios únicamente solicitan los siguientes documentos: <br>
+            • Acta de nacimiento <br>
+            • Credencial de elector (INE) <br>
+            • Comprobante de domicilio <br>
+            En caso de que algún refugio requiera otro documento, se indicará durante el proceso de adopción.
+        </details>
+    </div>
+
+    <div class="foto-final">
+        <img src="recursos/Imágenes/perrito asomado (1).png">
+    </div>
 </body>
 </html>
