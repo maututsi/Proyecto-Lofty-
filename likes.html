@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis likes</title>
+    <style>
+        @font-face 
+        {
+            font-family: "Futura";
+            src: url("recursos/fuentes/Futura_ICG.ttf") format("truetype");
+        }
+
+        @font-face 
+        {
+            font-family: "DM Sans";
+            src: url("recursos/fuentes/DMSans-Medium.ttf") format("truetype");
+        }
+        
+        @font-face 
+        {
+            font-family: "Cocogoose";
+            src: url("recursos/fuentes/Cocogoose-Pro-Regular-trial.ttf") format("truetype");
+        }
+        
+        body
+        {
+            flex-direction: row;
+            background-color: #e6e6e6;
+            margin: 0;
+        }
+
+        h1
+        {
+            font-family: "Cocogoose", sans-serif;
+            color: #ff4753;
+        }
+
+        .likes img
+        {
+            max-width: 200px;
+            border-radius: 20px;
+            margin-right: 20px;
+        }
+
+        .header-top
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            background-color: white;
+        }
+
+        .header-logo a
+        {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .header-top img
+        {
+            width: 50px;
+            height: 50px;
+            margin-left: 15px;
+        }
+
+        .header-right img
+        {
+            margin-right: 20px;
+            width: 35px;
+            height: 35px;
+        }
+
+        .header-top h2
+        {
+            font-family: "Futura", sans-serif;
+            color: #ff4753;
+        }
+
+        .cuerpo
+        {
+            padding-left: 3%;
+        }
+
+        .likes
+        {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .info
+        {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .contenedor
+        {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 25px;
+            max-width: fit-content;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+            margin-right: 30px;
+        }
+
+        .contenedor:hover
+        {
+            box-shadow: 0 0 5px 5px rgba(255, 88, 88, 0.3);
+            transition: ease 0.5s;
+        }
+
+        .texto
+        {
+            font-family: "Cocogoose", sans-serif;
+        }
+
+        .texto h3
+        {
+            color: #ff4753;
+        }
+
+        .texto p
+        {
+            font-family: "DM Sans", sans-serif;
+            max-width: 200px;
+        }
+
+        .botones
+        {
+            display: flex;
+            margin-top: 20px;
+            gap: 30px;
+        }
+
+        .botones button
+        {
+            background-color: white;
+            border: none;
+            box-shadow: 0 0 1px 1px rgba(255, 164, 164, 0.4);
+            border-radius: 15px;
+            font-family: "DM Sans", sans-serif;
+            padding: 10px;
+        }
+
+        button:hover
+        {
+            cursor: pointer;
+            box-shadow: 0 0 2px 2px rgba(255, 0, 0, 0.6);
+            transition: ease 0.2s;
+        }
+
+        .adoptar button
+        {
+            box-shadow: 0 0 1px 1px rgba(255, 231, 127, 0.5);
+        }
+
+        .adoptar button:hover
+        {
+            box-shadow: 0 0 2px 2px rgba(255, 231, 127, 0.7);
+        }
+
+        @media (max-width: 800px)
+        {
+            .likes
+            {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header-top">
+        <div class="header-logo">
+            <a href="https://app-lofty-fwyz.vercel.app/">
+                <img src="recursos/Imágenes/Logo app - colores invertidos.png">
+                <h2>Lofty</h2>
+            </a>
+        </div>
+        <div class="header-right">
+            <img src="https://res.cloudinary.com/devz9bjos/image/upload/v1733280333/user-icon_rbnnzz.png">
+        </div>
+    </header>
+    <div class="cuerpo">
+        <h1>Mis likes 👍</h1>
+    <div class="likes">
+        <div class="contenedor">
+            <div class="info">
+                <img src="https://res.cloudinary.com/devz9bjos/image/upload/v1733188372/bobby_bbkgxx.jpg">
+                <div class="texto">
+                    <h3>Bobby</h3>
+                    <h5>Perro</h5>
+                    <p>Un cachorro amigable y juguetón</p>
+                </div>
+            </div>
+            <div class="botones">
+                <button>Ver tarjeta de presentación</button>
+                <div class="adoptar">
+                    <button>Solicitar adopción</button>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor">
+            <div class="info">
+                <img src="https://res.cloudinary.com/dw9jt8ybg/image/upload/v1733271880/Nugget.webp">
+                <div class="texto">
+                <h3>Nugget</h3>
+                <h5>Gato</h5>
+                <p>Gato tranquilo, perezoso y algo torpe</p>
+            </div>
+            </div>
+            <div class="botones">
+                <button>Ver tarjeta de presentación</button>
+                <div class="adoptar">
+                    <button>Solicitar adopción</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+</body>
+</html>
